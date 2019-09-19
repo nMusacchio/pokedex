@@ -3,4 +3,19 @@
     height: 150px;
     background-position: center;
     background-size: cover;
+    background-color: lightgrey;
+}
+.card{
+    margin-bottom: 10px;
+    border: 1px solid lightskyblue;
+}
+.card .info{
+    padding: 10px;
+}
+.card small{
+    color: grey;
+    font-weight: 700;
+}
+.card .name{
+    font-weight: 700
 }

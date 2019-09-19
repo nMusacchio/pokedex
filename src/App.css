@@ -6,3 +6,9 @@
   font-family: 'Montserrat', sans-serif;
   background-image: url('/container_bg.png');
 }
+input{
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-color: lightyellow;
+}

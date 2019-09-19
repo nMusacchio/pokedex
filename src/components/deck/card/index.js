@@ -6,10 +6,12 @@ export class Card extends Component{
     render(){
         const {props} = this;
         return(  <Fragment>
-                    <div className="card">
+                    <div className={styles.card}>
                         <div className={styles.image} style={{ backgroundImage: 'url('+props.image+')' }} ></div>
-                        <small>{props.number +1}</small>
-                        <p className="name">{props.name}</p>
+                        <div className={styles.info}>
+                            <small>#{props.number.toString().padStart(3,'0')}</small>
+                            <p className={styles.name}>{props.name}</p>
+                        </div>
                         {/* <div className="types">
                             {}
                         </div> */}
