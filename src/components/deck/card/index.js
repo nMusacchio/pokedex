@@ -1,11 +1,11 @@
 import React, {Component, Fragment} from "react";
 import styles from './card.module.css';
-import {Link, Route} from 'react-router-dom';
+import {NavLink, Route} from 'react-router-dom';
 
 export class Card extends Component{
     render(){
         const {props} = this;
-        return(  <Link to={props.name}>
+        return(  <NavLink to={'/ficha/' + props.number.toString() }>
                     <div className={styles.card}>
                         <div className={styles.image} style={{ backgroundImage: 'url('+props.image+')' }} ></div>
                         <div className={styles.info}>
@@ -16,7 +16,7 @@ export class Card extends Component{
                             {}
                         </div> */}
                     </div>
-                </Link>
+                </NavLink>
             );
     }
 }
