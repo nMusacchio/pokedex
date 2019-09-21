@@ -2,6 +2,7 @@ import React, {Component, Fragment} from "react";
 import styles from './deck.module.css';
 import {Card} from './card';
 import pokedex from './../../pokedex.js';
+import {BrowserRouter} from 'react-router-dom';
 
 export class Deck extends Component{
     constructor(props) {
@@ -16,7 +17,8 @@ export class Deck extends Component{
         })
     }
     render(){
-        return(  <Fragment>
+        return(     
+                <BrowserRouter>
                     <input className={styles.searcher} onChange={e=>this.setValue(e.target.value)} type="text" placeholder="Search a Pokemon" value={this.state.search}/>
                     <div className={styles.deck}>
                         {
@@ -25,7 +27,7 @@ export class Deck extends Component{
                         )}
 
                      </div>
-                </Fragment>
+                </BrowserRouter>
             );
     }
 }
