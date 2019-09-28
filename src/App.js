@@ -7,7 +7,6 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 function App() {
   return (
     <div className="container">
-      <div className="banner"></div>
       <BrowserRouter>
         <Switch>
           <Route path="/ficha/:id" render={(props)=><Ficha {...props} />}></Route>

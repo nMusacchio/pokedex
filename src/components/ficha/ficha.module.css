@@ -1,0 +1,22 @@
+img.arrow{
+    width: 75px;
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+}
+.ficha{
+    display: inline-block;
+    vertical-align: middle
+}
+.fichaCont{
+    margin: 0px auto;
+    width: fit-content
+}
+.ficha .name{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+.ficha .name .number{
+    color: #AAAAAA;
+}

@@ -20,10 +20,11 @@ export class Deck extends Component{
                 <Fragment>
                     <input className={styles.searcher} onChange={e=>this.setValue(e.target.value)} type="text" placeholder="Search a Pokemon" value={this.state.search}/>
                     <div className={styles.deck}>
-                        {
-                            pokedex.filter(p=>p.name.english.includes(this.state.search)).map((pokemon, i) =>                             
-                            <Card name={pokemon.name.english} image={'https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+(pokemon.id).toString().padStart(3,'0')+'.png'} types={pokemon.type} key={pokemon.id} number={(pokemon.id)}></Card>
-                        )}
+                        {pokedex.map((pokemon, i) => (
+                            <div style={{ display: pokemon.name.english.includes(this.state.search) ? 'block' : 'none' }} key={i}>
+                                <Card pokemon={pokemon} />
+                            </div>
+                        ))}
 
                      </div>
                 </Fragment>
